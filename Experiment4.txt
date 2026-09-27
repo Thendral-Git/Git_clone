@@ -1,0 +1,121 @@
+EXPERIMENT 4: Clone a Remote Git Repository
+Aim
+To clone a remote Git repository from GitHub to the local machine using Git Bash.
+Requirements
+•	Git installed on your computer
+•	GitHub account
+•	Internet connection
+•	Git Bash
+
+Step 1: Open Git Bash
+Open Git Bash from the Start menu.
+You will see something like:
+Admin@PC MINGW64 ~
+$
+________________________________________
+Step 2: Check Git installation
+Type:
+git --version
+Example output:
+git version 2.55.0.windows.4
+This confirms Git is installed.
+________________________________________
+Step 3: Go to Desktop
+Type:
+cd Desktop
+Check your location:
+pwd
+You should see something similar to:
+/c/Users/Admin/Desktop
+________________________________________
+Step 4: Get the GitHub Repository URL
+Open the repository on GitHub.
+For example, suppose the repository URL is:
+https://github.com/username/Java-Lab.git
+On GitHub:
+Code → HTTPS → Copy
+For your lab, use the actual repository URL given by your teacher.
+________________________________________
+Step 5: Clone the repository
+In Git Bash, type:
+git clone https://github.com/username/Java-Lab.git
+Press Enter.
+You may see:
+Cloning into 'Java-Lab'...
+remote: Enumerating objects...
+remote: Counting objects...
+Receiving objects: 100%
+Resolving deltas: 100%
+This means the repository has been successfully copied to your computer.
+________________________________________
+Step 6: Check the cloned folder
+Type:
+ls
+You should see:
+Java-Lab
+________________________________________
+Step 7: Enter the cloned repository
+Type:
+cd Java-Lab
+Check the current location:
+pwd
+You should see something like:
+/c/Users/Admin/Desktop/Java-Lab
+________________________________________
+Step 8: Check the files
+Type:
+ls
+You will see the files and folders that were present in the GitHub repository.
+For example:
+README.md
+Hello.java
+Student.java
+________________________________________
+Step 9: Check Git status
+Type:
+git status
+You may get:
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+This confirms that your local repository is connected to the remote repository.
+________________________________________
+Step 10: Check the remote repository
+Type:
+git remote -v
+Example:
+origin  https://github.com/username/Java-Lab.git (fetch)
+origin  https://github.com/username/Java-Lab.git (push)
+Here:
+•	origin → name given to the remote repository
+•	fetch → used to download changes
+•	push → used to upload changes
+________________________________________
+Important Git Commands for This Experiment
+git clone <repository-url>
+→ Copies a remote repository to your computer.
+cd <repository-name>
+→ Enters the cloned repository.
+git status
+→ Shows the current status of the repository.
+git remote -v
+→ Shows the connected remote repository.
+cd ..
+→ Comes out of the repository folder.
+________________________________________
+⭐ Simple Flow to Remember
+GitHub Repository
+       ↓
+   git clone
+       ↓
+Local Computer
+       ↓
+   cd folder
+       ↓
+   git status
+       ↓
+Check Repository
+Expected Result
+The remote GitHub repository is successfully cloned to the local machine and verified using Git commands.
+
